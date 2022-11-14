@@ -15,9 +15,9 @@ let a, b, calculator;
 // b = Number(prompt("Zweite Zahl eingeben: "));
 
 a = getNumber1();
-calculator = prompt("Rechenart auswählen: +, -, *, /");
+c = getCalculator();
 b = getNumber2();
-calculate(a,b,calculator);
+calculate(a,b,c);
 
 function calculate(a, b, OP){
     switch (OP) {
@@ -56,6 +56,15 @@ function getNumber2(){
     } while (isNaN(b));
     return b;
 }
+
+function getCalculator(){
+    do {
+        z = prompt("Rechenart eingeben: +, -, *, /");
+
+    } while (z != "+" && z != "-" && z != "*" && z != "/");
+    return z;
+}
+
 
 function plus(a, b){
     return a + b;       // keine neue Variable deklarieren, gleich in den Return schreiben.
