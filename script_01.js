@@ -44,15 +44,15 @@ function calculate(a, b, OP){
 }
 
 function getNumber1(){
-    do {
-       a = Number(prompt("Erste Zahl eingeben: "));
-    } while (isNaN(a));
+    while (isNaN(a)) {
+        a = Number(prompt("Erste Zahl eingeben:"))
+    }
     return a;
 }
 
 function getNumber2(){
     do {
-       b = Number(prompt("Zweite Zahl eingeben: "));
+       b = Number(prompt("Zweite Zahl eingeben:"));
     } while (isNaN(b));
     return b;
 }
@@ -64,7 +64,6 @@ function getCalculator(){
     } while (z != "+" && z != "-" && z != "*" && z != "/");
     return z;
 }
-
 
 function plus(a, b){
     return a + b;       // keine neue Variable deklarieren, gleich in den Return schreiben.
